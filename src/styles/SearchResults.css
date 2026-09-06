@@ -1,0 +1,123 @@
+/* ✅ Container Styling */
+.results-container {
+  max-width: 900px;
+  margin: 100px auto 0;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ✅ Title Styling */
+.results-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+/* ✅ Highlight Important Info */
+.highlight {
+  color: #1e40af;
+  font-weight: 700;
+}
+
+/* ✅ Train List Styling */
+.train-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* ✅ Train Card Styling */
+.train-card {
+  background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ✅ Hover Effect */
+.train-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Card Header */
+.train-card-header h2 {
+  font-size: 1.6rem;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+/* ✅ Card Body */
+.train-card-body p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #2d3748;
+}
+
+/* ✅ Card Footer (Book Now Button) */
+.train-card-footer {
+  margin-top: 10px;
+}
+/* ✅ Book Now Button */
+.book-btn {
+  background: linear-gradient(to right, #1e40af, #2563eb);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-btn:hover {
+  background: linear-gradient(to right, #2563eb, #1e40af);
+}
+
+/* ✅ No Results Styling */
+.no-results {
+  font-size: 1.2rem;
+  color: #ff4d4d;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+/* ✅ Spinner (Loading Animation) */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 255, 0.2);
+  border-top: 5px solid #1e40af;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+  .results-title {
+    font-size: 1.6rem;
+  }
+  .train-card {
+    padding: 1rem;
+  }
+  .book-btn {
+    font-size: 0.9rem;
+  }
+}

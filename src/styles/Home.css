@@ -1,0 +1,299 @@
+/* General Page Styling */
+.home-container {
+  margin-top: 100px;
+  min-height: calc(100vh - 100px);
+  background: #f8fafc;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 95.5%;
+  margin: 0 auto;
+  min-height: 50vh;
+  background: url('https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2023/07/28094949/Vande-Bharat-Express-kerala.jpg?tr=w-1280,f-jpg,pr-true');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  max-width: 600px;
+  line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Search Section */
+.search-section {
+  margin-top: -50px;
+  padding: 0 1rem;
+  
+}
+
+.search-box {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Increased spacing between fields */
+  padding: 1.5rem;
+  
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem; /* More space between fields */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-group {
+  flex: 1;
+  position: relative;
+}
+
+/* ✅ Input Field Styling */
+.input-group input {
+  width: 100%;
+  padding: 1rem 3rem 1rem 3rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+/* ✅ Floating Label */
+.input-group label {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background: white;
+  padding: 0 5px;
+  
+  
+}
+
+/* ✅ Label Animation */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 1rem;
+  font-size: 0.8rem;
+  color: #2563eb;
+}
+
+/* ✅ Icon Inside Input */
+.input-group i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 1.2rem;
+}
+
+/* ✅ Swap Icon */
+.swap-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px; /* Increased size */
+  height: 45px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 10;
+  border: 2px solid #e2e8f0;
+  
+  /* ✅ Moves the icon slightly to the right */
+  margin-left: 50px; /* Adjust as needed */
+}
+
+
+.swap-icon:hover {
+  background: #e2e8f0;
+  transform: rotate(180deg);
+  
+}
+
+/* Date Picker Alignment Fix */
+.date-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.date-group input {
+  width: 100%;
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
+  font-size: 1rem;
+}
+
+.date-group i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+}
+
+.search-btn {
+  flex: 1;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #003580, #0057b3);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #0057b3, #003580);
+  transform: translateY(-2px);
+}
+/* ============================= */
+/*       POPULAR ROUTES         */
+/* ============================= */
+.popular-routes {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.routes-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 1rem auto;
+}
+
+.route-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.route-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.route-content {
+  margin-top: 10px;
+}
+
+.book-now-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #1e4ed8;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.book-now-btn:hover {
+  background: #153bac;
+}
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.feature-card {
+  text-align: center;
+  max-width: 300px;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #1e4ed8;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.feature-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .search-section {
+    margin-top: -30px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .swap-icon {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+}

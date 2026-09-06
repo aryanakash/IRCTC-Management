@@ -1,0 +1,75 @@
+/* Modern Confirmation Page Styles */
+.confirmation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 20px;
+  }
+  
+  .confirmation-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 450px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .confirmation-box:hover {
+    transform: scale(1.02);
+  }
+  
+  .confirmation-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00ffcc;
+    margin-bottom: 15px;
+  }
+  
+  .confirmation-details {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .confirmation-details p {
+    margin: 8px 0;
+  }
+  
+  .confirmation-btns {
+    margin-top: 20px;
+  }
+  
+  .confirmation-btn {
+    background: #00ffcc;
+    color: #003366;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .confirmation-btn:hover {
+    background: #00ccaa;
+  }
+  
+  .print-btn {
+    background: #ffa500;
+    margin-left: 10px;
+  }
+  
+  .print-btn:hover {
+    background: #ff8800;
+  }
+  

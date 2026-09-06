@@ -1,0 +1,143 @@
+/* ✅ Glassmorphism Search Container */
+.search-container {
+  max-width: 550px;
+  margin: 120px auto 2rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ✨ Lift effect on hover */
+.search-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Title Styling */
+.search-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+/* ✅ Form Group */
+.search-form .form-group {
+  margin-bottom: 1.8rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* ✅ Floating Label Effect */
+.search-form input {
+  width: 100%;
+  padding: 14px 16px; /* Increased padding */
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #3182ce;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+/* ✅ Input Focus */
+.search-form input:focus {
+  border-bottom: 2px solid #1e40af;
+  box-shadow: 0 4px 10px rgba(49, 130, 206, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* ✅ Floating Label Fix */
+.search-form label {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #4a5568;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  background: white;
+  padding: 2px 5px;
+}
+
+/* ✅ Label animation on input focus */
+.search-form input:focus + label,
+.search-form input:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 0.9rem;
+  color: #1e40af;
+}
+
+/* ✅ Date Picker Fix */
+.search-form input[type="date"] {
+  padding: 12px 14px;
+}
+
+/* ✅ Search Button */
+.search-btn {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #1e40af, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(49, 130, 206, 0.3);
+  display: block;
+}
+
+/* ✅ 3D Press Effect on Click */
+.search-btn:active {
+  transform: scale(0.98);
+}
+
+/* ✅ Button Hover Effect */
+.search-btn:hover {
+  background: linear-gradient(to right, #2563eb, #1e3a8a);
+  box-shadow: 0 6px 14px rgba(49, 130, 206, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+  .search-container {
+    padding: 2rem;
+    margin: 80px 20px;
+  }
+
+  .search-title {
+    font-size: 1.6rem;
+  }
+
+  .search-form input {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .search-btn {
+    width: 70%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}

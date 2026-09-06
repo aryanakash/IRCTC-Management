@@ -1,0 +1,273 @@
+/* General Page Styles */
+.home-container {
+  min-height: calc(100vh - 80px);
+  background: #f4f7fc;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 95%;
+  margin: 0 auto;
+  height: 60vh;
+  background: url('https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2023/07/28094949/Vande-Bharat-Express-kerala.jpg?tr=w-1280,f-jpg,pr-true') no-repeat center/cover;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Glassmorphism Effect */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+/* Hero Title & Subtitle */
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  max-width: 600px;
+  line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Search Section */
+.search-section {
+  margin-top: -50px;
+  padding: 0 1rem;
+}
+
+/* Search Box */
+.search-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.search-box:hover {
+  transform: translateY(-3px);
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #003580;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+  border-color: #003580;
+}
+
+/* Search Button */
+.search-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #003580, #0057b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #002460, #0047a3);
+  transform: translateY(-2px);
+}
+
+/* Popular Routes */
+.popular-routes {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.routes-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}
+
+/* Route Grid */
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Route Card */
+.route-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ddd;
+}
+
+.route-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Route Image */
+.route-image {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.route-card:hover .route-image {
+  transform: scale(1.05);
+}
+
+/* Route Content */
+.route-content {
+  padding: 1.5rem;
+}
+
+.route-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.route-details {
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.route-price {
+  color: #003580;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Book Now Button */
+.book-now-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(to right, #003580, #0057b3);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-now-btn:hover {
+  background: linear-gradient(to right, #002460, #0047a3);
+  transform: translateY(-2px);
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #0057b3;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.feature-text {
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .search-section {
+    margin-top: -30px;
+  }
+
+  .routes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}

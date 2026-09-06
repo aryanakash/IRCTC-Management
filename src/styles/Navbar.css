@@ -1,0 +1,234 @@
+/* ✅ Navbar Container */
+.navbar {
+  background-color: #003580; /* IRCTC Blue */
+  background-image: linear-gradient(to right, #003580, #0057b3);
+  padding: 14px 30px;
+  position: fixed;
+  width: 95%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+/* ✅ Navbar Flexbox */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* ✅ IRCTC Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-img {
+  height: 50px;
+  margin-right: 12px;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* ✅ Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 12px 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  border-radius: 6px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}
+
+/* ✅ Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+/* ✅ Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 17px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.dropdown-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.user-icon {
+  font-size: 22px;
+  margin-right: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 6px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.dropdown-btn:hover .user-icon {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background: white;
+  color: black;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  padding: 12px;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #003580, #0057b3);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 10px 10px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-link {
+    padding: 16px;
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-link::after {
+    display: none;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
